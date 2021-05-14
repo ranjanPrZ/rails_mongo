@@ -1,0 +1,11 @@
+<h2>User name and mailid</h2>
+
+<% @users.each do |user| %>
+	<P>
+		Name: <%= user.name %><br>
+		Email: <%= user.email %>
+	</P>
+<%end %>
+<br>
+<%= link_to "Create new user", new_path %>&nbsp&nbsp
+<%= link_to "Add new subject", new_subject_path %>

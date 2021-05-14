@@ -1,0 +1,7 @@
+<h2>Create new subject</h2>
+
+<%= form_for(@subject, url: create_subject_path ) do |f| %>
+	Name: <%= f.text_field :name %><br>
+	Author: <%= f.text_field :auther%><br />
+	<%= f.submit %>
+<% end %>
