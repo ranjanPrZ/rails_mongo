@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
+		byebug
+		@subject = User.last.subjects
 	end
 
 	def new

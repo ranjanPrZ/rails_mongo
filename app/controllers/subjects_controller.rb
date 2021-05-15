@@ -1,10 +1,15 @@
 class SubjectsController < ApplicationController
+	def index
+		@subjects = Subject.all
+	end
+
   def new
   	@subject = Subject.new
   end
 
   def create
   	subject = Subject.new(subject_params)
+  	subject.user_id = User.first.id
   	if subject.save
   		redirect_to '/users'
   	else

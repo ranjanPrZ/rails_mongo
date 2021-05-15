@@ -1,0 +1,11 @@
+<h2>Subject List</h2>
+
+<% @subjects.each do |sub| %>
+<p>
+	Student: <%= sub.user_id %><br>
+	Subject: <%= sub.name %><br>
+	Author: <%= sub.auther %>
+</p>
+<% end %>
+
+<%= link_to "User list", users_path %>

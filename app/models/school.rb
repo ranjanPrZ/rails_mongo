@@ -1,10 +1,8 @@
-class User
+class School
   include Mongoid::Document
   include Mongoid::Timestamps
 
   field :name, type: String
-  field :email, type: String
-
-  has_many :subjects
-  has_one :school
+  
+  belongs_to :user
 end

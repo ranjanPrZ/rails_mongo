@@ -6,6 +6,13 @@
 		Email: <%= user.email %>
 	</P>
 <%end %>
+
+<P>
+	<%= @subject.each do |sub| %>
+		<%= sub %>
+	<% end %>
+</P>
 <br>
 <%= link_to "Create new user", new_path %>&nbsp&nbsp
-<%= link_to "Add new subject", new_subject_path %>
+<%= link_to "Add new subject", new_subject_path %>&nbsp&nbsp
+<%= link_to "Subject list", subjects_path %>
